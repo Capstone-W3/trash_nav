@@ -1,0 +1,17 @@
+<launch>
+
+<include file="$(find turtlebot_bringup)/launch/minimal.launch"/>
+<include file="$(find realsense2_camera)/launch/rs_rgbd.launch"/>
+<include file="$(find depthimage_to_laserscan)/launch/launchfile_trash.launch"/>
+
+<node pkg="tf" type="static_transform_publisher" name="link1_broadcaster" args="0 0 0 0 0 0 1 base_link camera_link 10" />
+
+<node  pkg="rosbag" type="record" name="gmap_info_record" args="-O $(find nav_test)/bags/testCircleMap 
+/odom 
+/camera/color/image_raw 
+/camera/depth/camera_info 
+/camera/depth/image_rect_raw 
+/tf
+/scan" />
+
+</launch>

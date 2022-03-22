@@ -1,0 +1,9 @@
+<launch>
+
+  <include file="$(find turtlebot_bringup)/launch/minimal.launch"/>
+  <include file="$(find realsense2_camera)/launch/rs_rgbd.launch"/>
+  
+
+  <include file="$(find turtlebot_navigation)/launch/amcl_demo.launch" args="map_file:=$(find trash_nav)/gmapping/lab_circle_map.yaml" />  
+
+</launch>
