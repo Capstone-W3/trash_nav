@@ -1,6 +1,7 @@
 # trash_nav
 
 ### List of Commands for Launching 
+Run these commands from trash_parent_repo and then source from catkin_ws
 ```
 roslaunch turtlebot_bringup minimal.launch
 roslaunch realsense2_camera rs_rgdb.launch
