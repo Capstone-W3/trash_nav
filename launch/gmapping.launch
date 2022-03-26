@@ -11,8 +11,7 @@
 <node pkg="rosbag" type="record" name="gmapping" args="-O $(find trash_nav)/bags/testCircleMap
 /odom
 /camera/color/image_raw
-/camera/depth/camera_info
-/camera/deptj/image_rect_raw
+/camera/aligned_depth_to_color/image_raw
 /tf
 /scan
 /map" />
